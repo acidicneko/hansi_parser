@@ -32,8 +32,8 @@ class hansi_parser{
 // On line 74 and 83, replace fb_putchar() with your framebuffer specific putchar function.
 
 // implement these in your framebuffer driver
-extern void setCursorX(stack[i].value);
-extern void setCursorY(stack[i].value);
+extern void setCursorX(int value);
+extern void setCursorY(int value);
 
 // a global parser for ANSI. don't touch it
 extern hansi_parser g_parser;
