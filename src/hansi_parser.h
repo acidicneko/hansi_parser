@@ -14,18 +14,16 @@ But instead of a terminal, it is a ANSI Parser only.
 #define HTERM_ARGS	3
 #define HTERM_ENDARGS	4
 
-class ansi_args{
-	public:
+typedef struct{
 	int value;
 	bool empty;
-};
+} ansi_args;
 
-class hansi_parser{
-	public:
-	int state = HTERM_ESC;
+typedef struct{
+	int state;
 	int index;
 	ansi_args args[MAX_ARGS];
-};
+} hansi_parser;
 
 // check line 43, 50, 54, 58 to implement color changing abilities of your framebuffer
 
