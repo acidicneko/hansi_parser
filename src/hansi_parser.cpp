@@ -5,7 +5,7 @@ HANSIP is a modified version of VTConsole.
 But instead of a terminal, it is a ANSI Parser only.
 */
 #include "hansi_parser.h"
-hansi_parser g_parser; // global parser object
+hansi_parser g_parser = {.state = HTERM_ESC}; // global parser object
 bool isdigit(char c){
 	if(c >= '0' && c <= '9'){
 		return true;
